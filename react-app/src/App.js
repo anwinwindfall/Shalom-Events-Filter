@@ -6,6 +6,7 @@ import Input from './components/Input.js';
 
 function App({ moduleData }) {
   // eslint-disable-next-line no-console
+  const regionFilterList=[{region_name:"All", region_id:"all"}, ...moduleData.filter_settings.region_filter]      
 
   return (
     <div className="sw-events-class">
@@ -38,5 +39,5 @@ function App({ moduleData }) {
 
   );
 }
-
+   
 export default App;
