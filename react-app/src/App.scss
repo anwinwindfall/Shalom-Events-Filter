@@ -1,10 +1,124 @@
 .sw-events-filter__container {
   text-align: center;
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+
+  justify-items: center;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: max(20px);
+
+  @media only screen and (max-width: 1200px) {
+    grid-template-columns: repeat(auto-fit, 270px);
+  }
+
+  @media only screen and (max-width: 991px) {
+    max-height: 641px;
+    overflow-y: auto;
+  }
 }
+
+.sw-events-class {
+  color: white;
+  background: linear-gradient(180deg, #D85E07 0%, #FFAD38 100%);
+  padding: 71px;
+  @media only screen and (max-width: 768px){
+    padding: 15px;
+  }
+}
+
+.sw-events-filter__container::-webkit-scrollbar {
+  display: none;
+}
+
+.sw-events-filter-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 27px;
+
+  // @media only screen and (max-width: 991px) {
+  //   flex-direction: column;
+  //   margin-bottom: 27px;
+  //   align-items: center;
+  // }
+
+  
+  ul,
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sw-switch-container,
+  .sw-menu {
+    display: flex;
+  }
+
+  // @media only screen and (max-width: 701px) {
+  //   .sw-menu {
+  //     flex-direction: column !important;
+  //     & li{
+  //      padding-left: 0px !important;
+  //     }
+  //   }
+  // }
+  @media only screen and (max-width: 991px){
+    .sw-menu {
+      display:  none;
+    }
+  }
+
+
+  .sw-menu li {
+    padding-left: 40px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.94px;
+    letter-spacing: 0.3em;
+    text-align: center;
+    color: #FFFFFF80;
+
+  }
+
+  .sw-menu li.active {
+    color: #FFFFFF;
+  }
+}
+.sw-switch-container {
+  li {
+    margin-bottom: 27px;
+    border-radius: 8px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    text-align: center;
+  }
+
+  & li:first-child {
+    background-color: #FFFFFF;
+    padding-right: 12px;
+    color: #000000B2;
+    padding: 18px 22px;
+    margin-right: 12px;
+  }
+
+  & li:nth-child(2) {
+    background: #00000099;
+    color: #FFFFFF;
+    padding: 18px 33px;
+  }
+}
+ul,
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sw-switch-container,
+  .sw-menu {
+    display: flex;
+  }

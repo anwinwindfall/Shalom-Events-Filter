@@ -1,0 +1,50 @@
+
+select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background: none !important;
+    background: rgba(0, 0, 0, .6) !important;
+    color: #fff;
+    border-radius: 8px;
+    position: relative;
+
+
+}
+
+@media only screen and (min-width: 992px) {
+    select {
+        display: none;
+    }
+}
+
+.custom-select {
+    &:after {
+        content: '';
+        background-image: url('https://143223961.fs1.hubspotusercontent-eu1.net/hubfs/143223961/raw_assets/public/Assets/Shalom%20Events/arrow-down-bold-svgrepo-com.svg');
+        /* Specify the path to your image */
+        background-size: cover;
+        /* Ensure the image covers the entire container */
+        background-position: center;
+        /* Center the background image */
+        position: absolute;
+        width: 20px;
+        /* Adjust width as needed */
+        height: 20px;
+        /* Adjust height as needed */
+        top: 50%;
+        right: 10px; /* Adjust right position as needed */
+        transform: translateY(-50%);
+    }
+}
+.custom-select {
+    position: relative;
+    width: 200px; /* Adjust width as needed */
+  }
+  
+  .custom-select select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none; /* Remove default arrow for Safari */
+    -moz-appearance: none; /* Remove default arrow for Firefox */
+    
+  }
