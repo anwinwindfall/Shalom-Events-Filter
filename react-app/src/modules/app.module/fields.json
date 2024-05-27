@@ -1,13 +1,174 @@
 [
   {
-    "default": 0,
-    "min": 0,
-    "max": 100,
-    "display": "slider",
-    "label": "Starting number of reasons",
-    "locked": false,
-    "name": "initial_count",
-    "required": false,
-    "type": "number"
+   "type": "choice",
+   "id": "94b4891b-48e3-40da-dd64-c662c40fcc08",
+   "display": "select",
+   "choices": [
+    [
+     "card",
+     "Card"
+    ],
+    [
+     "filter",
+     "Filter"
+    ]
+   ],
+   "label": "Module Type",
+   "name": "module_type",
+   "default": "card"
+  },
+  {
+   "type": "group",
+   "id": "92f59d64-bbc6-88f2-bac2-ad1aad16b087",
+   "label": "Event Details",
+   "children": [
+    {
+     "type": "datetime",
+     "id": "bcb2aa73-648e-7661-9f50-0c913bfc4f04",
+     "step": 30,
+     "label": "Event Date",
+     "name": "event_date",
+     "default": 1714536000000
+    },
+    {
+     "type": "text",
+     "id": "04aec406-9658-87f0-42ec-abaa5ab345d0",
+     "validation_regex": "",
+     "label": "Event Location",
+     "name": "event_location"
+    },
+    {
+     "type": "text",
+     "validation_regex": "",
+     "label": "Event State",
+     "name": "event_state",
+     "oldId": "04aec406-9658-87f0-42ec-abaa5ab345d0",
+     "id": "efe7cc9e-3bf2-2a05-2c13-f9ea850ba631"
+    },
+    {
+     "type": "text",
+     "validation_regex": "",
+     "label": "Event Time",
+     "name": "event_time",
+     "oldId": "efe7cc9e-3bf2-2a05-2c13-f9ea850ba631",
+     "id": "a0335724-b14d-9f50-3f65-6e6b588f0192"
+    },
+    {
+     "type": "text",
+     "validation_regex": "",
+     "label": "Learn More Link",
+     "name": "learn_more_link",
+     "oldId": "a0335724-b14d-9f50-3f65-6e6b588f0192",
+     "id": "a5893013-170f-2be4-fb39-5827a5b32f0d"
+    },
+    {
+     "type": "text",
+     "validation_regex": "",
+     "label": "Event Region",
+     "name": "event_region",
+     "oldId": "a0335724-b14d-9f50-3f65-6e6b588f0192",
+     "id": "e24d0447-d483-d1ef-f282-d669e487264c",
+     "placeholder": "Enter the region filter value (match with region names)"
+    }
+   ],
+   "name": "event_details",
+   "default": [],
+   "visibility": {
+    "operator": "EQUAL",
+    "controlling_field_path": "module_type",
+    "controlling_value_regex": "filter"
+   },
+   "occurrence": {}
+  },
+  {
+   "type": "group",
+   "label": "Event Details",
+   "children": [
+    {
+     "type": "text",
+     "id": "b89f2655-78d5-d2e2-578b-973da19878cd",
+     "validation_regex": "",
+     "label": "Text",
+     "name": "Title"
+    },
+    {
+     "type": "text",
+     "id": "c8f3de9e-8b0c-9804-ed40-ae82396a2bf2",
+     "validation_regex": "",
+     "label": "Location",
+     "name": "location"
+    },
+    {
+     "type": "text",
+     "validation_regex": "",
+     "label": "Time",
+     "name": "time",
+     "oldId": "c8f3de9e-8b0c-9804-ed40-ae82396a2bf2",
+     "id": "22904f02-474a-2efd-1a7e-175d79bd8497"
+    }
+   ],
+   "name": "event_details_card",
+   "default": {},
+   "visibility": {
+    "operator": "EQUAL",
+    "controlling_field_path": "module_type",
+    "controlling_value_regex": "card"
+   },
+   "oldId": "92f59d64-bbc6-88f2-bac2-ad1aad16b087",
+   "id": "a8887c8c-12b5-3e71-41c0-b802f0276b91"
+  },
+  {
+   "type": "group",
+   "id": "a5b08343-77e6-32c7-0f74-14e51ca8bdba",
+   "label": "Filter Settings",
+   "children": [
+    {
+     "type": "color",
+     "id": "be2d337e-f634-5843-58b3-83e305042e56",
+     "default": {
+      "color": null,
+      "opacity": null
+     },
+     "label": "Background Color",
+     "name": "background_color",
+     "show_opacity": true
+    },
+    {
+     "type": "group",
+     "id": "f6344a89-d063-6c74-f769-64c5ded90646",
+     "label": "Region Filter",
+     "children": [
+      {
+       "type": "text",
+       "id": "98bf4dc6-6e28-9d86-4658-82cbc98f6dfc",
+       "validation_regex": "",
+       "label": "Region Name",
+       "name": "region_name"
+      },
+      {
+       "type": "text",
+       "validation_regex": "",
+       "label": "Region ID",
+       "name": "region_id",
+       "oldId": "98bf4dc6-6e28-9d86-4658-82cbc98f6dfc",
+       "id": "ac0577aa-1ea8-f05c-354f-d9acffd077f2"
+      }
+     ],
+     "name": "region_filter",
+     "default": [],
+     "occurrence": {
+      "min": 0,
+      "max": 7
+     }
+    }
+   ],
+   "name": "filter_settings",
+   "default": {
+    "background_color": {
+     "color": null,
+     "opacity": null
+    },
+    "region_filter": []
+   }
   }
-]
+ ]
