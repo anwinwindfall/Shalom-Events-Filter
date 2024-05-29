@@ -1,5 +1,5 @@
 import { Date } from 'core-js'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Card from './Card.js';
 import Input from './Input.js';
 import RegionsList from './RegionsList.js';
@@ -8,6 +8,7 @@ const Container = ({ eventDetails, regionFilterList, cardStyles }) => {
     const [dateCondition, setDateCondition] = useState("current");
     const [regionFilter, setRegionFilter] = useState("all");
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
     function timeZoneSetter(timeZone) {
         let zone = '';
         switch (timeZone) {

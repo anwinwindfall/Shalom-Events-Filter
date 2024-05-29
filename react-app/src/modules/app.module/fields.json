@@ -203,8 +203,8 @@
         "color": "#D96209",
         "opacity": 100
        },
-       "label": "Tertiary Color",
-       "name": "tertiary_color",
+       "label": "Primary Color",
+       "name": "primary_color",
        "oldId": "57deddda-7b57-62b8-1531-8002dc8db2e2",
        "id": "9ce354ec-4621-8ee4-ebef-e8d235a0cde6"
       },
@@ -222,7 +222,7 @@
      ],
      "name": "card_styles",
      "default": {
-      "tertiary_color": {
+      "primary_color": {
        "color": "#D96209",
        "opacity": 100
       },
@@ -241,7 +241,7 @@
     },
     "region_filter": [],
     "card_styles": {
-     "tertiary_color": {
+     "primary_color": {
       "color": "#D96209",
       "opacity": 100
      },
