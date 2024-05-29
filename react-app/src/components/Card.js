@@ -1,22 +1,23 @@
 import React from 'react'
-import '../components/card.scss'
+import './Card.scss'
+const Card = ({ eventsInfo, cardStyles }) => {
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
-const Card = () => {
   return (
     <div class="event-card">
       <div class="card-content">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ">
         <div class="card-text">
-          <h1>April 14</h1>
+          <h1>{`${months[parseInt(eventsInfo?.event_date.substr(3, 2))]} ${eventsInfo?.event_date.substr(0, 2)}`}</h1>
           <p>
-            Rhode Island
+            {eventsInfo?.event_location}
           </p>
           <p>
-            CT
+            {eventsInfo?.event_state}
           </p>
-          <h3>Sunday, 3p-5p</h3>
+          <h3>{eventsInfo?.event_time}</h3>
         </div>
         <div class="hr-line"></div>
-        <a class="more-btn">Learn More</a>
+        <a href={eventsInfo?.learn_more_link} class="more-btn">Learn More</a>
       </div>
 
 

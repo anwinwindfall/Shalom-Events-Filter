@@ -20,7 +20,8 @@
 
 .sw-events-class {
   color: white;
-  background: linear-gradient(180deg, #D85E07 0%, #FFAD38 100%);
+  // background: linear-gradient(180deg, #D85E07 0%, #FFAD38 100%);
+  background: transparent;
   padding: 71px;
   @media only screen and (max-width: 768px){
     padding: 15px;
@@ -79,7 +80,7 @@
     letter-spacing: 0.3em;
     text-align: center;
     color: #FFFFFF80;
-
+    cursor: pointer;
   }
 
   .sw-menu li.active {
@@ -95,20 +96,26 @@
     font-weight: 500;
     line-height: 21.78px;
     text-align: center;
+    background: #00000099;
+    color: #FFFFFF;
+    cursor: pointer;
   }
 
   & li:first-child {
-    background-color: #FFFFFF;
+    
     padding-right: 12px;
-    color: #000000B2;
+    
     padding: 18px 22px;
     margin-right: 12px;
   }
 
   & li:nth-child(2) {
-    background: #00000099;
-    color: #FFFFFF;
+    
     padding: 18px 33px;
+  }
+  .active{
+    background-color: #FFFFFF;
+    color: #000000B2;
   }
 }
 ul,

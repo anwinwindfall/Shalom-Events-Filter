@@ -23,12 +23,43 @@
    "label": "Event Details",
    "children": [
     {
-     "type": "datetime",
-     "id": "bcb2aa73-648e-7661-9f50-0c913bfc4f04",
-     "step": 30,
+     "type": "choice",
+     "id": "1c7000e9-235d-e33a-9591-0b1c11982295",
+     "display": "select",
+     "choices": [
+      [
+       "pst",
+       "PST"
+      ],
+      [
+       "cst",
+       "CST"
+      ],
+      [
+       "est",
+       "EST"
+      ],
+      [
+       "mt",
+       "MT"
+      ],
+      [
+       "pt",
+       "PT"
+      ]
+     ],
+     "label": "Time Zone",
+     "name": "time_zone"
+    },
+    {
+     "type": "text",
+     "id": "38c3c370-824f-b816-8bbd-f52bbac5cd5a",
+     "validation_regex": "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}$",
      "label": "Event Date",
      "name": "event_date",
-     "default": 1714536000000
+     "default": "01/01/2000",
+     "validation_error_message": "Invalid Date (format - 20/03/2000)",
+     "show_emoji_picker": false
     },
     {
      "type": "text",
@@ -160,6 +191,46 @@
       "min": 0,
       "max": 7
      }
+    },
+    {
+     "type": "group",
+     "id": "c839b99f-5387-1ff1-77f8-48be04678e71",
+     "label": "Card Styles",
+     "children": [
+      {
+       "type": "color",
+       "default": {
+        "color": "#D96209",
+        "opacity": 100
+       },
+       "label": "Tertiary Color",
+       "name": "tertiary_color",
+       "oldId": "57deddda-7b57-62b8-1531-8002dc8db2e2",
+       "id": "9ce354ec-4621-8ee4-ebef-e8d235a0cde6"
+      },
+      {
+       "type": "color",
+       "default": {
+        "color": "#515151",
+        "opacity": 100
+       },
+       "label": "Secondary Color",
+       "name": "secondary_color",
+       "oldId": "9c48ee27-2479-1185-b512-3be663467b14",
+       "id": "57deddda-7b57-62b8-1531-8002dc8db2e2"
+      }
+     ],
+     "name": "card_styles",
+     "default": {
+      "tertiary_color": {
+       "color": "#D96209",
+       "opacity": 100
+      },
+      "secondary_color": {
+       "color": "#515151",
+       "opacity": 100
+      }
+     }
     }
    ],
    "name": "filter_settings",
@@ -168,7 +239,17 @@
      "color": null,
      "opacity": null
     },
-    "region_filter": []
+    "region_filter": [],
+    "card_styles": {
+     "tertiary_color": {
+      "color": "#D96209",
+      "opacity": 100
+     },
+     "secondary_color": {
+      "color": "#515151",
+      "opacity": 100
+     }
+    }
    }
   }
  ]
