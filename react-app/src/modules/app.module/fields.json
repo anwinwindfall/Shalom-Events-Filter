@@ -1,8 +1,5 @@
 [
   {
-   "type": "choice",
-   "id": "94b4891b-48e3-40da-dd64-c662c40fcc08",
-   "display": "select",
    "choices": [
     [
      "card",
@@ -13,19 +10,22 @@
      "Filter"
     ]
    ],
+   "default": "filter",
+   "display": "select",
+   "display_width": null,
+   "id": "94b4891b-48e3-40da-dd64-c662c40fcc08",
    "label": "Module Type",
+   "locked": false,
+   "multiple": false,
    "name": "module_type",
-   "default": "card"
+   "preset": null,
+   "reordering_enabled": true,
+   "required": false,
+   "type": "choice"
   },
   {
-   "type": "group",
-   "id": "92f59d64-bbc6-88f2-bac2-ad1aad16b087",
-   "label": "Event Details",
    "children": [
     {
-     "type": "choice",
-     "id": "1c7000e9-235d-e33a-9591-0b1c11982295",
-     "display": "select",
      "choices": [
       [
        "pst",
@@ -48,208 +48,349 @@
        "PT"
       ]
      ],
+     "display": "select",
+     "display_width": null,
+     "id": "1c7000e9-235d-e33a-9591-0b1c11982295",
      "label": "Time Zone",
-     "name": "time_zone"
+     "locked": false,
+     "multiple": false,
+     "name": "time_zone",
+     "preset": null,
+     "reordering_enabled": true,
+     "required": false,
+     "type": "choice"
     },
     {
-     "type": "text",
-     "id": "38c3c370-824f-b816-8bbd-f52bbac5cd5a",
-     "validation_regex": "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}$",
-     "label": "Event Date",
-     "name": "event_date",
+     "allow_new_line": false,
      "default": "01/01/2000",
+     "display_width": null,
+     "id": "38c3c370-824f-b816-8bbd-f52bbac5cd5a",
+     "label": "Event Date",
+     "locked": false,
+     "name": "event_date",
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
      "validation_error_message": "Invalid Date (format - 20/03/2000)",
-     "show_emoji_picker": false
+     "validation_regex": "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}$"
     },
     {
-     "type": "text",
+     "allow_new_line": false,
+     "display_width": null,
      "id": "04aec406-9658-87f0-42ec-abaa5ab345d0",
-     "validation_regex": "",
      "label": "Event Location",
-     "name": "event_location"
+     "locked": false,
+     "name": "event_location",
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
+     "validation_regex": ""
     },
     {
-     "type": "text",
-     "validation_regex": "",
+     "allow_new_line": false,
+     "display_width": null,
+     "id": "efe7cc9e-3bf2-2a05-2c13-f9ea850ba631",
      "label": "Event State",
+     "locked": false,
      "name": "event_state",
-     "oldId": "04aec406-9658-87f0-42ec-abaa5ab345d0",
-     "id": "efe7cc9e-3bf2-2a05-2c13-f9ea850ba631"
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
+     "validation_regex": ""
     },
     {
-     "type": "text",
-     "validation_regex": "",
+     "allow_new_line": false,
+     "display_width": null,
+     "id": "a0335724-b14d-9f50-3f65-6e6b588f0192",
      "label": "Event Time",
+     "locked": false,
      "name": "event_time",
-     "oldId": "efe7cc9e-3bf2-2a05-2c13-f9ea850ba631",
-     "id": "a0335724-b14d-9f50-3f65-6e6b588f0192"
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
+     "validation_regex": ""
     },
     {
-     "type": "text",
-     "validation_regex": "",
+     "allow_new_line": false,
+     "display_width": null,
+     "id": "a5893013-170f-2be4-fb39-5827a5b32f0d",
      "label": "Learn More Link",
+     "locked": false,
      "name": "learn_more_link",
-     "oldId": "a0335724-b14d-9f50-3f65-6e6b588f0192",
-     "id": "a5893013-170f-2be4-fb39-5827a5b32f0d"
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
+     "validation_regex": ""
     },
     {
-     "type": "text",
-     "validation_regex": "",
-     "label": "Event Region",
-     "name": "event_region",
-     "oldId": "a0335724-b14d-9f50-3f65-6e6b588f0192",
+     "allow_new_line": false,
+     "display_width": null,
      "id": "e24d0447-d483-d1ef-f282-d669e487264c",
-     "placeholder": "Enter the region filter value (match with region names)"
+     "label": "Event Region",
+     "locked": false,
+     "name": "event_region",
+     "placeholder": "Enter the region filter value (match with region names)",
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
+     "validation_regex": ""
     }
    ],
-   "name": "event_details",
    "default": [],
+   "display_width": null,
+   "expanded": false,
+   "group_occurrence_meta": null,
+   "id": "92f59d64-bbc6-88f2-bac2-ad1aad16b087",
+   "label": "Event Details",
+   "locked": false,
+   "name": "event_details",
+   "occurrence": {},
+   "required": false,
+   "tab": "CONTENT",
+   "type": "group",
    "visibility": {
-    "operator": "EQUAL",
     "controlling_field_path": "module_type",
-    "controlling_value_regex": "filter"
-   },
-   "occurrence": {}
+    "controlling_value_regex": "filter",
+    "operator": "EQUAL"
+   }
   },
   {
-   "type": "group",
-   "label": "Event Details",
    "children": [
     {
-     "type": "text",
+     "allow_new_line": false,
+     "display_width": null,
      "id": "b89f2655-78d5-d2e2-578b-973da19878cd",
+     "label": "Title",
+     "locked": false,
+     "name": "title",
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
      "validation_regex": "",
-     "label": "Text",
-     "name": "Title"
+     "default": "Title"
     },
     {
-     "type": "text",
+     "allow_new_line": false,
+     "display_width": null,
      "id": "c8f3de9e-8b0c-9804-ed40-ae82396a2bf2",
-     "validation_regex": "",
      "label": "Location",
-     "name": "location"
+     "locked": false,
+     "name": "location",
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
+     "validation_regex": "",
+     "default": "Location"
+    },
+    {
+     "allow_new_line": false,
+     "display_width": null,
+     "id": "22904f02-474a-2efd-1a7e-175d79bd8497",
+     "label": "Time",
+     "locked": false,
+     "name": "time",
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
+     "validation_regex": "",
+     "default": "Day | Time"
     },
     {
      "type": "text",
+     "id": "4f0e3184-2406-4876-98f2-63d1db08d59d",
      "validation_regex": "",
-     "label": "Time",
-     "name": "time",
-     "oldId": "c8f3de9e-8b0c-9804-ed40-ae82396a2bf2",
-     "id": "22904f02-474a-2efd-1a7e-175d79bd8497"
+     "label": "Reg Link",
+     "name": "reg_link"
     }
    ],
-   "name": "event_details_card",
-   "default": {},
-   "visibility": {
-    "operator": "EQUAL",
-    "controlling_field_path": "module_type",
-    "controlling_value_regex": "card"
+   "default": {
+    "title": "Title",
+    "location": "Location",
+    "time": "Day | Time"
    },
-   "oldId": "92f59d64-bbc6-88f2-bac2-ad1aad16b087",
-   "id": "a8887c8c-12b5-3e71-41c0-b802f0276b91"
+   "display_width": null,
+   "expanded": false,
+   "group_occurrence_meta": null,
+   "id": "a8887c8c-12b5-3e71-41c0-b802f0276b91",
+   "label": "Event Details",
+   "locked": false,
+   "name": "event_details_card",
+   "required": false,
+   "tab": "CONTENT",
+   "type": "group",
+   "visibility": {
+    "controlling_field_path": "module_type",
+    "controlling_value_regex": "card",
+    "operator": "EQUAL"
+   }
   },
   {
-   "type": "group",
-   "id": "a5b08343-77e6-32c7-0f74-14e51ca8bdba",
-   "label": "Filter Settings",
    "children": [
     {
-     "type": "color",
-     "id": "be2d337e-f634-5843-58b3-83e305042e56",
      "default": {
       "color": null,
       "opacity": null
      },
+     "display_width": null,
+     "id": "be2d337e-f634-5843-58b3-83e305042e56",
      "label": "Background Color",
+     "locked": false,
      "name": "background_color",
-     "show_opacity": true
+     "required": false,
+     "show_opacity": true,
+     "type": "color"
     },
     {
-     "type": "group",
+     "children": [
+      {
+       "allow_new_line": false,
+       "display_width": null,
+       "id": "98bf4dc6-6e28-9d86-4658-82cbc98f6dfc",
+       "label": "Region Name",
+       "locked": false,
+       "name": "region_name",
+       "required": false,
+       "show_emoji_picker": false,
+       "type": "text",
+       "validation_regex": ""
+      },
+      {
+       "allow_new_line": false,
+       "display_width": null,
+       "id": "ac0577aa-1ea8-f05c-354f-d9acffd077f2",
+       "label": "Region ID",
+       "locked": false,
+       "name": "region_id",
+       "required": false,
+       "show_emoji_picker": false,
+       "type": "text",
+       "validation_regex": ""
+      }
+     ],
+     "default": [],
+     "display_width": null,
+     "expanded": false,
+     "group_occurrence_meta": null,
      "id": "f6344a89-d063-6c74-f769-64c5ded90646",
      "label": "Region Filter",
-     "children": [
-      {
-       "type": "text",
-       "id": "98bf4dc6-6e28-9d86-4658-82cbc98f6dfc",
-       "validation_regex": "",
-       "label": "Region Name",
-       "name": "region_name"
-      },
-      {
-       "type": "text",
-       "validation_regex": "",
-       "label": "Region ID",
-       "name": "region_id",
-       "oldId": "98bf4dc6-6e28-9d86-4658-82cbc98f6dfc",
-       "id": "ac0577aa-1ea8-f05c-354f-d9acffd077f2"
-      }
-     ],
+     "locked": false,
      "name": "region_filter",
-     "default": [],
      "occurrence": {
-      "min": 0,
-      "max": 7
-     }
-    },
-    {
-     "type": "group",
-     "id": "c839b99f-5387-1ff1-77f8-48be04678e71",
-     "label": "Card Styles",
-     "children": [
-      {
-       "type": "color",
-       "default": {
-        "color": "#D96209",
-        "opacity": 100
-       },
-       "label": "Primary Color",
-       "name": "primary_color",
-       "oldId": "57deddda-7b57-62b8-1531-8002dc8db2e2",
-       "id": "9ce354ec-4621-8ee4-ebef-e8d235a0cde6"
-      },
-      {
-       "type": "color",
-       "default": {
-        "color": "#515151",
-        "opacity": 100
-       },
-       "label": "Secondary Color",
-       "name": "secondary_color",
-       "oldId": "9c48ee27-2479-1185-b512-3be663467b14",
-       "id": "57deddda-7b57-62b8-1531-8002dc8db2e2"
-      }
-     ],
-     "name": "card_styles",
-     "default": {
-      "primary_color": {
-       "color": "#D96209",
-       "opacity": 100
-      },
-      "secondary_color": {
-       "color": "#515151",
-       "opacity": 100
-      }
-     }
+      "max": 7,
+      "min": 0
+     },
+     "required": false,
+     "tab": "CONTENT",
+     "type": "group"
     }
    ],
-   "name": "filter_settings",
    "default": {
     "background_color": {
      "color": null,
      "opacity": null
     },
-    "region_filter": [],
-    "card_styles": {
-     "primary_color": {
+    "region_filter": []
+   },
+   "display_width": null,
+   "expanded": false,
+   "group_occurrence_meta": null,
+   "id": "a5b08343-77e6-32c7-0f74-14e51ca8bdba",
+   "label": "Filter Settings",
+   "locked": false,
+   "name": "filter_settings",
+   "required": false,
+   "tab": "CONTENT",
+   "type": "group"
+  },
+  {
+   "children": [
+    {
+     "default": {
       "color": "#D96209",
       "opacity": 100
      },
-     "secondary_color": {
+     "display_width": null,
+     "id": "9ce354ec-4621-8ee4-ebef-e8d235a0cde6",
+     "label": "Primary Color",
+     "locked": false,
+     "name": "primary_color",
+     "required": false,
+     "type": "color"
+    },
+    {
+     "default": {
       "color": "#515151",
       "opacity": 100
-     }
+     },
+     "display_width": null,
+     "id": "57deddda-7b57-62b8-1531-8002dc8db2e2",
+     "label": "Secondary Color",
+     "locked": false,
+     "name": "secondary_color",
+     "required": false,
+     "type": "color"
+    },
+    {
+     "type": "color",
+     "id": "99c1260c-cc2e-e86a-5093-e01e6638a85d",
+     "default": {
+      "color": "#346A9B",
+      "opacity": 100
+     },
+     "label": "Reg-button-Color",
+     "name": "reg_button_color",
+     "visibility": {
+      "operator": "EQUAL",
+      "controlling_field_path": "module_type",
+      "controlling_value_regex": "card"
+     },
+     "show_opacity": true
+    },
+    {
+     "type": "color",
+     "default": {
+      "color": "#FFFFFF",
+      "opacity": 100
+     },
+     "label": "Reg button Text color",
+     "name": "reg_button_text_color",
+     "visibility": {
+      "operator": "EQUAL",
+      "controlling_field_path": "module_type",
+      "controlling_value_regex": "card"
+     },
+     "oldId": "99c1260c-cc2e-e86a-5093-e01e6638a85d",
+     "id": "7faa75c2-4da5-5275-dee2-a97eb15877c3",
+     "show_opacity": true
     }
-   }
+   ],
+   "default": {
+    "primary_color": {
+     "color": "#D96209",
+     "opacity": 100
+    },
+    "secondary_color": {
+     "color": "#515151",
+     "opacity": 100
+    },
+    "reg_button_color": {
+     "color": "#346A9B",
+     "opacity": 100
+    },
+    "reg_button_text_color": {
+     "color": "#FFFFFF",
+     "opacity": 100
+    }
+   },
+   "display_width": null,
+   "expanded": false,
+   "group_occurrence_meta": null,
+   "id": "c839b99f-5387-1ff1-77f8-48be04678e71",
+   "label": "Card Styles",
+   "locked": false,
+   "name": "card_styles",
+   "required": false,
+   "tab": "CONTENT",
+   "type": "group"
   }
  ]
