@@ -8,7 +8,7 @@ const Card = ({ eventsInfo, cardStyles }) => {
     <div class="event-card">
       <div class="card-content">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ">
         <div class="card-text">
-          <h1 style={{color:primary}}>{`${months[parseInt(eventsInfo?.event_date.substr(3, 2))]} ${eventsInfo?.event_date.substr(0, 2)}`}</h1>
+          <h1 style={{color:primary}}>{`${months[parseInt(eventsInfo?.event_date.substr(3, 2))-1]} ${eventsInfo?.event_date.substr(0, 2)}`}</h1>
           <p style={{color:secondary}}>
             {eventsInfo?.event_location}
           </p>

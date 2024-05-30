@@ -5,7 +5,6 @@ import CardStandalone from './components/CardStandalone.js';
 
 
 function App({ moduleData }) {
-  console.log(moduleData.event_details_card);
 
   const regionFilterList = [{ region_name: "All", region_id: "all" }, ...moduleData.filter_settings.region_filter]
 

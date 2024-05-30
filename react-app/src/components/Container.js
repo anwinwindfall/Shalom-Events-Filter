@@ -20,9 +20,13 @@ const Container = ({ eventDetails, regionFilterList, cardStyles }) => {
         }
         return zone
     }
-
+  
 
     useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const regionParam = params.get('region');
+        setRegionFilter(regionParam || 'all')
+        
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
         }
@@ -31,7 +35,6 @@ const Container = ({ eventDetails, regionFilterList, cardStyles }) => {
             window.removeEventListener('resize', handleResize);
         };
     }, [])
-
     const currentDate = new Date();
     let events = [{}];
     const convertToComparableFormat = (dateStr) => {
